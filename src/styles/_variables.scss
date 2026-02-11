@@ -1,0 +1,27 @@
+/* color */
+
+$color-primary: #3a0ca3;
+$color-white: #ffffff;
+$color-dark: #2b2b2b;
+$color-accent: #4361ee;
+$color-black: #0b090a;
+$color-gray: #808080;
+$color-light-gray: #d4d4d4;
+
+/* font */
+
+$font-family-base: "Poppins", sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+$rezilla-1920: 1920px;
+$rezilla-1440: 1440px;
+$rezilla-mobile: 768px;
+
+$breakpoints: (
+  rezilla-1920: 1920px,
+  rezilla-1440: 1440px,
+  rezilla-mobile: 768px,
+);
