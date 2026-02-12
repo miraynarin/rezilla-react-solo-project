@@ -1,5 +1,4 @@
-@use "./variables" as *;
-
+/* Reset.css - Temel stil sıfırlama */
 *,
 *::before,
 *::after {
@@ -8,66 +7,64 @@
   box-sizing: border-box;
 }
 
-/* Improve text rendering */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   line-height: 1.5;
-  font-family: $font-family-base;
-  font-weight: $font-weight-regular;
-  color: $color-dark;
-  background-color: $color-white;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* Media elements */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* Form elements inherit font */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Prevent text overflow issues */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* Root isolation (React / Next safety) */
-#root,
-#__next {
-  isolation: isolate;
-}
-
-/* Remove default list styles */
-ul,
-ol {
-  list-style: none;
-}
-
-/* Remove default link styles */
+/* Görünmeyen öğeler */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Optional smoother motion preference */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Form elemanları */
+button,
+input,
+select,
+textarea {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Görünüm için bazı iyileştirmeler */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+iframe {
+  border: none;
+}
+
+/* HTML5 semantik elemanlar için stil */
+header,
+footer,
+section,
+article,
+nav,
+aside,
+main {
+  display: block;
 }

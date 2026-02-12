@@ -1,0 +1,29 @@
+@use "/src/styles/variables" as *;
+.navbarSection {
+  position: fixed; // sayfada sabit kalır
+  top: 0; // üstten sıfır
+  left: 0; // soldan sıfır
+  width: 100%; // tüm genişlik
+  z-index: 999; // diğer içeriklerin üstünde
+  background-color: $color-white;
+  min-height: 80px;
+  display: flex;
+
+  font-family: $font-family-base;
+  font-weight: $font-weight-medium;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.navbarSection .container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.linkArea {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+}
