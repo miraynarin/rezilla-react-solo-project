@@ -1,29 +1,75 @@
 @use "/src/styles/variables" as *;
-.navbarSection {
-  position: fixed; // sayfada sabit kalır
-  top: 0; // üstten sıfır
-  left: 0; // soldan sıfır
-  width: 100%; // tüm genişlik
-  z-index: 999; // diğer içeriklerin üstünde
-  background-color: $color-white;
-  min-height: 80px;
-  display: flex;
 
-  font-family: $font-family-base;
-  font-weight: $font-weight-medium;
-  font-size: 16px;
-  padding: 10px 0;
-}
-.navbarSection .container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 40px;
+.navbarSection {
+  background-color: $color-white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  color: $color-dark;
+  margin: auto;
+  padding: 15px 72px 15px 72px;
+  position: relative;
+  z-index: 999;
+  font-family: $font-family-base;
+  color: $color-dark;
 }
 .linkArea {
   display: flex;
-  justify-content: start;
-  gap: 30px;
+  gap: 15px;
+  align-items: center;
+  font-size: 16px;
+  color: $color-dark;
+  font-weight: $font-weight-regular;
+  a {
+    padding: 8px 16px;
+    &:hover {
+      background-color: rgba($color-primary, 0.3);
+      border-radius: 30px;
+    }
+  }
+}
+.navbarLogo {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hauseIcon {
+  display: flex;
+  padding: 13px 13px;
+  width: 50px;
+  height: 50px;
+  background-color: $color-primary;
+  border-radius: 80px;
+  gap: 50px;
+}
+.logoText {
+  font-size: 20px;
+  font-weight: $font-weight-semibold;
+}
+.icon {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  font-size: 16px;
+  font-weight: $font-weight-regular;
+}
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+}
+.houseIconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-primary;
+  border-radius: 50px;
+  color: $color-white;
+  padding: 15px 26px 15px 26px;
+  gap: 8px;
 }
