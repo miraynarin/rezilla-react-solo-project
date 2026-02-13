@@ -11,8 +11,8 @@ const Navbar: React.FC = () => {
 
   return (
     <header className={styles.navbarSection}>
-     <div className={styles.navbarMenu}>
-      {/* Link Alanı */}
+     
+    
       <div className={`${styles.linkArea} ${isMenuOpen ? styles.open : ""}`}>
         <a href="/" className={isActive("/home") ? styles.active : ""}>Home</a>
         <a href="#" className={isActive("/about") ? styles.active : ""}>About</a>
@@ -20,22 +20,23 @@ const Navbar: React.FC = () => {
         <a href="#" className={isActive("/services") ? styles.active : ""}>Services</a>
         <a href="#" className={isActive("/blogs") ? styles.active : ""}>Blogs</a>
       </div>
-    </div>
+    
+    
     <div className={styles.navbarLogo}>
-        <img src="/images/rezilla-house-icon.svg" alt="Rezilla Icon" />
+        <img  className={styles.hauseIcon} src="/images/rezilla-house-icon.svg" alt="Rezilla Icon" />
         <span className={styles.logoText}>Rezilla</span>
     </div>
-      {/* İkonlar */}
+   
       <div className={styles.icon}>
         <button className={styles.iconButton}>
-          <img src="/images/user-icon.svg" alt="User Icon" />
+          <img src="/images/user-icon.svg" alt="User Icon" />Login/Register
         </button>
-        <button className={styles.iconButton}>
-          <img src="/images/rezilla-house-icon.svg" alt="Home Icon" />
+        <button className={styles.houseIconButton}>
+          <img className={styles.buttonHouse}src="/images/rezilla-house-icon.svg" alt="Home Icon" />Add Listing
         </button>
       </div>
 
-      {/* Hamburger Menü */}
+      
       <div className={styles.hamburgerArea}>
         <button
           className={`${styles.hamburgerMenu} ${isMenuOpen ? styles.active : ""}`}
