@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
   return (
     <header className={styles.navbarSection}>
      
-    
+  
       <div className={`${styles.linkArea} ${isMenuOpen ? styles.open : ""}`}>
         <a href="/" className={isActive("/home") ? styles.active : ""}>Home</a>
         <a href="#" className={isActive("/about") ? styles.active : ""}>About</a>
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
           <img className={styles.buttonHouse}src="/images/rezilla-house-icon.svg" alt="Home Icon" />Add Listing
         </button>
       </div>
-
+    
       
       <div className={styles.hamburgerArea}>
         <button
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           <span></span>
         </button>
       </div>
-
+     
     </header>
   );
 };
