@@ -7,12 +7,14 @@
   justify-content: space-between;
   color: $color-dark;
   margin: auto;
-  padding: 15px 72px 15px 72px;
+  padding: 15px 0;
   position: relative;
   z-index: 999;
   font-family: $font-family-base;
   color: $color-dark;
+  max-width: 1440px;
 }
+
 .linkArea {
   display: flex;
   gap: 15px;
@@ -29,9 +31,9 @@
   }
 }
 .navbarLogo {
-  position: absolute;
-  left: 50%;
   display: flex;
+  flex: 1;
+  justify-content: center;
   align-items: center;
   gap: 12px;
 }
@@ -72,4 +74,96 @@
   color: $color-white;
   padding: 15px 26px 15px 26px;
   gap: 8px;
+}
+.hamburgerArea {
+  display: none;
+  .hamburgerMenu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+
+    // Çizgilerin kendisi
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: $color-black;
+      transition: all 0.3s ease-in-out; // Dönüşüm efekti
+    }
+
+    // Aktif olduğunda (Çarpı Olma Hali)
+    &.active {
+      // 1. Çizgi: 45 derece dön ve biraz aşağı kay
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      // 2. Çizgi (Ortadaki): Kaybol
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      // 3. Çizgi: Tersi yönde 45 derece dön ve yukarı kay
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .navbarSection {
+    padding: 15px 20px;
+  }
+}
+@media (max-width: $r-1440) {
+  .navbarSection {
+    padding: 15px 72px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .linkArea {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 60px; // navbar yüksekliğine göre ayarla
+    right: 0;
+    width: 100%;
+    background-color: $color-white;
+    color: $color-dark;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+    z-index: 0; // kapatılmış durumda arka plan
+
+    &.open {
+      max-width: 300px;
+      justify-content: flex-end;
+      opacity: 1;
+      visibility: visible;
+      margin-top: 30px;
+    }
+  }
+
+  .navbarLogo {
+    justify-content: flex-start;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .hamburgerArea {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
 }
