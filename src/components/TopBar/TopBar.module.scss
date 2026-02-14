@@ -1,0 +1,12 @@
+@use "/src/styles/variables" as *;
+.topbarSection {
+  background-color: $color-primary;
+}
+.topbarContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  color: $color-white;
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+  font-size: 13.3px;
+}
