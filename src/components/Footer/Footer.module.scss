@@ -1,15 +1,10 @@
 @use "/src/styles/variables" as *;
-.footerSection {
-  width: 1440px;
 
-  padding: 15px 0;
-  position: relative;
-  z-index: 999;
-}
 .footerContainer {
   background-color: rgba($color-primary, 0.1);
   max-width: 1440px;
-
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 50px 50px;
@@ -19,6 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 8px 14px;
 }
 .footerIconGroup {
   display: flex;
@@ -49,4 +45,14 @@
 }
 .footerFirstPhone {
   gap: 50px;
+}
+@media (max-width: 1500px) {
+  .footerContainer {
+    padding: 50px 50px;
+  }
+}
+@media (max-width: $r-1440) {
+  .footerContainer {
+    padding: 50px 50px;
+  }
 }
