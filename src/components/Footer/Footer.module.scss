@@ -1,4 +1,52 @@
 @use "/src/styles/variables" as *;
+.footerSection {
+  width: 1440px;
+
+  padding: 15px 0;
+  position: relative;
+  z-index: 999;
+}
+.footerContainer {
+  background-color: rgba($color-primary, 0.1);
+  max-width: 1440px;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 50px;
+}
 .footerFirstArea {
-  color: black;
+  color: $color-black;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footerIconGroup {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.footerHouseIcon {
+  background-color: $color-primary;
+  width: 50px;
+  height: 50px;
+  border-radius: 80px;
+  padding: 13px 13px;
+}
+.footerFirstText {
+  color: $color-dark;
+  font-size: 20px;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-base;
+}
+.footerFirstAdress {
+  font-size: 12px;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-base;
+  margin: 0 0 20px 0;
+}
+.footerFirstPhone {
+  gap: 50px;
 }
