@@ -12,7 +12,8 @@ function App() {
     <>
     <TopBar />
     <Navbar />
-      <Footer />
+    <HeroSection />
+    <Footer />
     </>
   )
 }
