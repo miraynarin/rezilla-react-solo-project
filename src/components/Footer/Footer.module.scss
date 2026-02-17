@@ -3,22 +3,20 @@
 .footerContainer {
   background-color: rgba($color-primary, 0.1);
   max-width: 1440px;
-  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 50px 50px;
 }
+
 .footerFirstArea {
   color: $color-black;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 8px 14px;
+  gap: 10px;
+  padding: 8px 16px;
 }
 .footerIconGroup {
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -32,27 +30,96 @@
   padding: 13px 13px;
 }
 .footerFirstText {
+  margin-left: 12px;
   color: $color-dark;
   font-size: 20px;
   font-weight: $font-weight-semibold;
   font-family: $font-family-base;
 }
 .footerFirstAdress {
-  font-size: 12px;
+  color: $color-dark;
+  font-size: 16px;
   font-weight: $font-weight-medium;
   font-family: $font-family-base;
   margin: 0 0 20px 0;
 }
-.footerFirstPhone {
-  gap: 50px;
+.footerFirstPhone,
+.footerFirstEmail {
+  color: $color-dark;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-base;
+}
+
+.footerSecondArea,
+.footerFourthArea {
+  margin-top: 30px;
+}
+.footerSecondArea h4,
+.footerThirdArea h4,
+.footerFourthArea h4 {
+  font-size: 19px;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-base;
+}
+.footerSecondArea ul li:first-child,
+.footerThirdArea ul li:first-child {
+  margin-top: 12px;
+}
+.footerSecondArea ul li,
+.footerThirdArea ul li {
+  margin-bottom: 2px;
+  font-family: $font-family-base;
+  font-size: 16px;
+  font-weight: $font-weight-regular;
+}
+.footerThirdArea {
+  margin-top: 60px;
+}
+.footerFourthIconWrapper {
+  margin-top: 20px;
+  position: relative;
+}
+.footerFourthEmail {
+  background-color: $color-white;
+  width: 350px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 5px 5px 5px 10px;
+}
+.footerFourthButton {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: $color-primary;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+.socialIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+.footerFourthArea p {
+  margin-top: 25px;
+  color: $color-black;
+  font-size: 19px;
+  font-weight: $font-weight-medium;
+  font-family: $font-family-base;
 }
 @media (max-width: 1500px) {
   .footerContainer {
-    padding: 50px 50px;
+    padding: 15px 20px;
   }
 }
 @media (max-width: $r-1440) {
   .footerContainer {
-    padding: 50px 50px;
+    padding: 15px 72px;
   }
 }
