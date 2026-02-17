@@ -35,10 +35,12 @@ const Footer = () => {
         </div>
         <div className={styles.footerFourthArea}>
             <h4 className={styles.footerFourthTitle}>Subscribe to our Newsletter!</h4>
+            <div className={styles.footerFourthIconWrapper}>
             <input className={styles.footerFourthEmail} placeholder='Email Address'/>     
             <button className={styles.footerFourthButton}>
              <img className={styles.footerFourthOk} src="/images/footer-ok-button.svg" alt="Footer Ok Icon" />   
             </button>
+            </div>
             <p>Follow Us on</p>
             <div className={styles.socialIcons}>
                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
