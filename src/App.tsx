@@ -13,7 +13,6 @@ function App() {
     <TopBar />
     <Navbar />
       <Footer />
-     
     </>
   )
 }
