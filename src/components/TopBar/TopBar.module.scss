@@ -3,10 +3,38 @@
   background-color: $color-primary;
 }
 .topbarContainer {
-  max-width: 1440px;
-  margin: 0 auto;
-  color: $color-white;
   font-family: $font-family-base;
   font-weight: $font-weight-regular;
   font-size: 13.3px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: $color-white;
+  margin: auto;
+  padding: 12px 0;
+  max-width: 1440px;
+  position: relative;
+  z-index: 999;
+}
+.topbarLeft {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 5px;
+}
+.topbarRight {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+}
+@media (max-width: $r-1500) {
+  .topbarContainer {
+    padding: 12px 20px;
+  }
+}
+@media (max-width: $r-1440) {
+  .topbarContainer {
+    padding: 12px 72px;
+  }
 }
