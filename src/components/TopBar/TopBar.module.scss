@@ -20,13 +20,17 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 }
 .topbarRight {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  gap: 20px;
+  gap: 30px;
+}
+
+.topbarItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 @media (max-width: $r-1500) {
