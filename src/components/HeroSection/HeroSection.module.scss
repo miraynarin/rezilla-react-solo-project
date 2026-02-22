@@ -1,30 +1,35 @@
 @use "/src/styles/variables" as *;
 
 .heroFirstSection {
-  /*  max-width: 1440;
-  margin: 0 auto; */
   background: linear-gradient(
     180deg,
     rgba(76, 201, 240, 0) 0%,
     rgba(67, 97, 238, 0.3) 100%
   );
-  /*  height: 600px; */
   border-radius: 0 0 800px 800px;
+  width: 100%; // Ekranı kapla
+  max-width: 1440px; // İçeriğin maksimum genişliği
+  margin: 0 auto;
 }
 .heroContainer {
   width: 100%;
   max-width: 1440px;
+  min-height: 902px;
+  margin: 0 auto;
   padding: 116px 72px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 902px;
 }
-.leftHeroTop {
+.leftHeroSection {
   display: flex;
   flex-direction: column;
+  max-width: 668px;
 }
-
+.leftHeroTop {
+  gap: 30px;
+  max-height: 216px;
+}
 .leftHeroTitle {
   color: $color-accent;
   font-size: 19.4px;
@@ -53,9 +58,19 @@
 }
 
 .leftHeroImage {
-  width: 668px;
-  height: 351px;
-  gap: 11px;
+  width: 100%; // container genişliğine göre ölçeklenir
+  max-width: 668px; // maksimum genişlik
+  aspect-ratio: 668 / 351; // oran korunur
+  overflow: hidden; // taşan kısımları gizler
+  margin-top: auto; // flex column’da resim en alta itilir
+  position: relative;
+}
+
+.leftHeroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // container tamamen dolacak
+  display: block; // inline boşluğu engeller
 }
 
 .rightHeroSection {
@@ -125,4 +140,9 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+@media (max-width: $r-1440) {
+  .heroContainer {
+    padding: 116px 72px;
+  }
 }
