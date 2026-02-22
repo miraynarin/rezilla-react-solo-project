@@ -141,6 +141,44 @@
   gap: 8px;
 }
 
+/* Ortak buton stili */
+.rightForSale,
+.rightForRent {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-family: $font-family-base;
+  font-weight: $font-weight-medium;
+  color: $color-dark-gray;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover efekti */
+.rightForSale:hover,
+.rightForRent:hover {
+  color: $color-primary;
+}
+
+/* Active olan buton */
+.active {
+  color: $color-primary;
+}
+
+/* Active alt çizgi efekti */
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -41px; // border-bottom hizasına göre ayarla
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: $color-primary;
+  border-radius: 2px;
+}
 @media (max-width: $r-1440) {
   .heroContainer {
     padding: 116px 72px;
