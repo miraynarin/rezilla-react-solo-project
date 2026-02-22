@@ -1,30 +1,36 @@
 @use "/src/styles/variables" as *;
 
 .heroFirstSection {
-  /*  max-width: 1440;
-  margin: 0 auto; */
   background: linear-gradient(
     180deg,
     rgba(76, 201, 240, 0) 0%,
     rgba(67, 97, 238, 0.3) 100%
   );
-  /*  height: 600px; */
   border-radius: 0 0 800px 800px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .heroContainer {
   width: 100%;
   max-width: 1440px;
+  min-height: 902px;
+  margin: 0 auto;
   padding: 116px 72px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 902px;
 }
-.leftHeroTop {
+.leftHeroSection {
   display: flex;
   flex-direction: column;
+  max-width: 668px;
+  width: 100%;
 }
-
+.leftHeroTop {
+  gap: 30px;
+  max-height: 216px;
+}
 .leftHeroTitle {
   color: $color-accent;
   font-size: 19.4px;
@@ -53,9 +59,17 @@
 }
 
 .leftHeroImage {
-  width: 668px;
-  height: 351px;
-  gap: 11px;
+  width: 100%;
+  height: auto; // aspect ratio korunacak
+  margin-top: auto;
+  position: relative;
+}
+
+.leftHeroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // resim kapsayıcıya tam oturur
+  display: block;
 }
 
 .rightHeroSection {
@@ -63,15 +77,15 @@
   min-height: 582px;
   display: flex;
   flex-direction: column;
-
   background-color: $color-white;
   border-radius: 20px;
+  font-family: $font-family-base;
+  font-size: 16px;
 }
 .searchFirst,
 .selectInput {
   width: 445px;
   height: 59px;
-
   border-radius: 20px;
   opacity: 1;
   box-sizing: border-box;
@@ -83,7 +97,7 @@
   padding: 24px 20px;
 }
 .selectInput {
-  padding: 21px 20px;
+  padding: 19px 20px;
 }
 .searchFirst::placeholder {
   color: $color-dark-gray;
@@ -110,7 +124,7 @@
 .rightTopSearch {
   display: flex;
   flex-direction: column;
-  gap: 20px; // elemanlar arası boşluk
+  gap: 20px;
 }
 .bottomHeroButton {
   width: 445px;
@@ -125,4 +139,10 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+@media (max-width: $r-1440) {
+  .heroContainer {
+    padding: 116px 72px;
+  }
 }
