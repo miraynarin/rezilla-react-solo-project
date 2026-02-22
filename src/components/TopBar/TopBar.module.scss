@@ -43,3 +43,8 @@
     padding: 12px 72px;
   }
 }
+@media (max-width: $r-1050) {
+  .topbarSection {
+    display: none;
+  }
+}
