@@ -1,6 +1,8 @@
 @use "/src/styles/variables" as *;
 .footerBottomSection {
   background-color: $color-black;
+  height: 50px;
+  overflow: hidden;
 }
 .footerBottomContainer {
   font-family: $font-family-base;
@@ -8,7 +10,6 @@
   font-size: 16px;
   color: $color-dark-gray;
   margin: auto;
-  padding: 19px 160px;
   max-width: 1440px;
   position: relative;
   z-index: 999;
@@ -27,14 +28,10 @@
     padding: 19px 160px;
   }
 }
-@media (max-width: $r-1440) {
+
+@media (max-width: $rezilla-mobile) {
   .footerBottomSection {
-    padding: 19px 160px;
-  }
-}
-@media (max-width: $r-1920) {
-  .footerBottomSection {
-    padding: 19px 240px;
+    height: 76px;
   }
 }
 @media (max-width: 1250px) {

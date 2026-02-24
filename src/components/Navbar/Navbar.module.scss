@@ -64,6 +64,7 @@
   gap: 8px;
   padding: 0;
 }
+
 .houseIconButton {
   display: flex;
   align-items: center;
@@ -112,6 +113,10 @@
   }
 }
 
+.mobileMenu {
+  display: none;
+}
+
 @media (max-width: $r-1500) {
   .navbarSection {
     padding: 15px 20px;
@@ -143,13 +148,7 @@
     transition: all 0.3s ease-in-out;
     z-index: 0; // kapatılmış durumda arka plan
 
-    &.open {
-      max-width: 300px;
-      justify-content: flex-end;
-      opacity: 1;
-      visibility: visible;
-      margin-top: 30px;
-    }
+ 
   }
 
   .navbarLogo {
@@ -163,6 +162,56 @@
   .hamburgerArea {
     display: flex;
     justify-content: flex-end;
-    flex: 1;
+
+  }
+  .mobileMenuSection {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0; 
+    right: -1000px; // Başlangıçta görünmez yapmak için
+    width: 100%;
+    height: 100vh;
+    background-color: #00000066;
+    color: $color-dark;
+    
+    z-index: 0; 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease-in-out;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      right: 0; // Menü açıldığında sağa kayarak görünür hale gelir
+      z-index: 999; // açıldığında üstte kalması için
+    }
+
+    .mobileMenu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0 20px;
+      
+      max-width: 300px;
+      width: 70%;
+      height: 100vh;
+      gap: 20px;
+  
+      justify-content: center;
+      background-color: $color-white;
+    }
+
+    .mobileLinks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      flex: 1;
+
+     
+    }
   }
 }

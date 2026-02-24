@@ -68,3 +68,5 @@ aside,
 main {
   display: block;
 }
+
+select { appearance: none; /* Safari ve modern tarayıcılar */ -webkit-appearance: none; /* Chrome/Safari */ -moz-appearance: none; /* Firefox */ background: none; }

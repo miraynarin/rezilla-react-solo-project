@@ -25,7 +25,7 @@ const HeroSection = () => {
           </div>
           <div className={styles.leftHeroImage}>
             <img
-              src="/images/herosection-left-image.svg"
+              src="/images/hero.jpg"
               alt="HeroSection Image"
             />
           </div>
