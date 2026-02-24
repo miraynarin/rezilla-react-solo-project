@@ -1,0 +1,55 @@
+@use "/src/styles/variables" as *;
+.footerBottomSection {
+  background-color: $color-black;
+}
+.footerBottomContainer {
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+  font-size: 16px;
+  color: $color-dark-gray;
+  margin: auto;
+  padding: 19px 160px;
+  max-width: 1440px;
+  position: relative;
+  z-index: 999;
+}
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+}
+.footerLinks {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+@media (max-width: 1500px) {
+  .footerBottomSection {
+    padding: 19px 160px;
+  }
+}
+@media (max-width: $r-1440) {
+  .footerBottomSection {
+    padding: 19px 160px;
+  }
+}
+@media (max-width: $r-1920) {
+  .footerBottomSection {
+    padding: 19px 240px;
+  }
+}
+@media (max-width: 1250px) {
+  .footerBottomSection {
+    .footerBottom {
+      display: flex;
+      white-space: nowrap;
+      align-items: center;
+    }
+    .footerLinks {
+      display: flex;
+      justify-content: center;
+    }
+    .footerLinks a {
+      white-space: nowrap; // Metnin alt alta düşmesini engeller
+    }
+  }
+}
