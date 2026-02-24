@@ -5,6 +5,7 @@ type PropertyType = "apartment" | "villa" | "land";
 type RoomType = "1+1" | "2+1" | "3+1" | "4+1";
 
 const HeroSection = () => {
+  const [listingType, setListingType] = useState<"sale" | "rent">("sale");
   const [selectedType, setSelectedType] = useState<PropertyType | "">("");
   const [selectedRoom, setSelectedRoom] = useState<RoomType | "">("");
 
@@ -31,9 +32,20 @@ const HeroSection = () => {
         </div>
 
         <div className={styles.rightHeroSection}>
+          {/* Toggle Buttons */}
           <div className={styles.rightHeroTitle}>
-            <button className={styles.rightForSale}>For Sale</button>
-            <button className={styles.rightForRent}>For Rent</button>
+            <button
+              className={`${styles.rightForSale} ${listingType === "sale" ? styles.active : ""}`}
+              onClick={() => setListingType("sale")}
+            >
+              For Sale
+            </button>
+            <button
+              className={`${styles.rightForRent} ${listingType === "rent" ? styles.active : ""}`}
+              onClick={() => setListingType("rent")}
+            >
+              For Rent
+            </button>
           </div>
 
           <div className={styles.rightHeroSearch}>
