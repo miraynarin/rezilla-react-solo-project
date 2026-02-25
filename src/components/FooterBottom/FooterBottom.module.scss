@@ -1,6 +1,8 @@
 @use "/src/styles/variables" as *;
 .footerBottomSection {
   background-color: $color-black;
+  max-height: 50px;
+  overflow: hidden;
 }
 .footerBottomContainer {
   font-family: $font-family-base;
@@ -8,7 +10,6 @@
   font-size: 16px;
   color: $color-dark-gray;
   margin: auto;
-  padding: 19px 160px;
   max-width: 1440px;
   position: relative;
   z-index: 999;
@@ -16,25 +17,25 @@
 .footerBottom {
   display: flex;
   flex-direction: column;
+  padding: 0 16px;
 }
 .footerLinks {
   display: flex;
   gap: 40px;
   list-style: none;
 }
-@media (max-width: 1500px) {
-  .footerBottomSection {
-    padding: 19px 160px;
-  }
-}
 @media (max-width: $r-1440) {
   .footerBottomSection {
-    padding: 19px 160px;
+    padding: 5px 72px 0 72px;
+  }
+  .footerBottom {
+    padding: 0 16px;
   }
 }
-@media (max-width: $r-1920) {
+
+@media (max-width: $rezilla-mobile) {
   .footerBottomSection {
-    padding: 19px 240px;
+    height: 76px;
   }
 }
 @media (max-width: 1250px) {
