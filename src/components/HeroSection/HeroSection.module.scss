@@ -26,6 +26,7 @@
   flex-direction: column;
   max-width: 668px;
   width: 100%;
+  max-height: 617px;
 }
 .leftHeroTop {
   gap: 30px;
@@ -68,13 +69,15 @@
 .leftHeroImage img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 16/7; // resmin ortısını korur
   object-fit: cover; // resim kapsayıcıya tam oturur
   display: block;
+  border-radius: 20px;
 }
 
 .rightHeroSection {
   max-width: 485px;
-  min-height: 582px;
+  max-height: 582px;
   display: flex;
   flex-direction: column;
   background-color: $color-white;
@@ -109,6 +112,7 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 485px;
+  max-height: 80px;
   padding: 40px 40px;
   color: $color-dark-gray;
   border-bottom: 1px solid #aaaaaa;
@@ -124,7 +128,7 @@
 .rightTopSearch {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
 }
 .bottomHeroButton {
   width: 445px;
@@ -172,12 +176,19 @@
 .active::after {
   content: "";
   position: absolute;
-  bottom: -41px; // border-bottom hizasına göre ayarla
+  bottom: -22px; // border-bottom hizasına göre ayarla
   left: 0;
   width: 100%;
   height: 3px;
   background-color: $color-primary;
   border-radius: 2px;
+}
+.advancedSearch {
+  display: flex;
+  justify-content: row;
+  gap: 10px;
+  color: $color-primary;
+  font-size: 13.3px;
 }
 @media (max-width: $r-1440) {
   .heroContainer {
