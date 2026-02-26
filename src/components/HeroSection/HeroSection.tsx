@@ -1,5 +1,6 @@
 import styles from './HeroSection.module.scss';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type PropertyType = "apartment" | "villa" | "land";
 type RoomType = "1+1" | "2+1" | "3+1" | "4+1";
@@ -85,7 +86,10 @@ const HeroSection = () => {
                   <option value="4+1">4+1</option>
                 </select>
               </div>
-
+              <div className={styles.advancedSearchArea}>
+                <img src="/images/advance-search-icon.svg" alt="Advance Search Icon" />
+              <Link to="/advanced-search" className={styles.advanceSearch}>Advanced Search</Link>
+              </div>
               <button className={styles.bottomHeroButton}>
                 <img
                   className={styles.bottomHeroIcon}
