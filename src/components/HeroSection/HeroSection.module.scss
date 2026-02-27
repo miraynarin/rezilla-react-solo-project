@@ -54,25 +54,87 @@
   font-size: 16px;
   font-family: $font-family-base;
   font-weight: $font-weight-regular;
+  margin-top: 20px;
 }
 .leftHeroAccount span {
   display: block;
 }
 
-.leftHeroImage {
+.mainSlider {
+  position: relative; // oklar bu container'a göre absolute olacak
   width: 100%;
-  height: auto; // aspect ratio korunacak
-  margin-top: auto;
-  position: relative;
+  max-width: 668px; // resim boyutu ile eşleşsin
+  height: 351px;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+  }
+
+  .prevArrow,
+  .nextArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: $color-white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: 16px;
+  }
+
+  .prevArrow {
+    left: 0; // resmin sol kenarına sabit
+  }
+
+  .nextArrow {
+    right: 0; // resmin sağ kenarına sabit
+  }
+}
+/* LEFT HERO SLIDER */
+.leftHeroBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 3px; // main slider ile thumbnail arası boşluk
+  margin-top: 50px;
 }
 
-.leftHeroImage img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16/7; // resmin ortısını korur
-  object-fit: cover; // resim kapsayıcıya tam oturur
-  display: block;
-  border-radius: 20px;
+.lineIndicatorWrapper {
+  display: flex;
+  gap: 10px; // çizgiler arası boşluk
+  margin-top: 10px; // ana slider altına mesafe
+  justify-content: center; // ortaya hizala
+}
+.lineIndicator {
+  width: 100px; // eşit genişlik
+  height: 0;
+  border-top: 4px solid $color-gray; // varsayılan gri
+  border-radius: 2px;
+  opacity: 0.5;
+  transition:
+    border-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.lineIndicator.active {
+  border-color: $color-primary; // aktif slide mor
+  opacity: 1;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: $color-white;
+  width: 40px;
+  height: 40px;
 }
 
 .rightHeroSection {
@@ -170,17 +232,6 @@
   color: $color-primary;
 }
 
-/* Active alt çizgi efekti */
-.active::after {
-  content: "";
-  position: absolute;
-  bottom: -22px; // border-bottom hizasına göre ayarla
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: $color-primary;
-  border-radius: 2px;
-}
 .advancedSearchArea {
   display: flex;
   justify-content: row;
