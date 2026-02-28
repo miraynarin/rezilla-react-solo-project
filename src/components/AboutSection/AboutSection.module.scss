@@ -2,11 +2,17 @@
 .aboutSection {
   width: 100%;
   max-width: 1440px;
+  height: auto;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 0 72px;
   margin: 72px auto 0;
+}
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 .aboutLeftContainer {
   max-width: 500px;
@@ -45,6 +51,7 @@
     gap: 25px;
     border-radius: 30px;
     padding: 35px;
+    max-height: 131px;
     box-shadow: 4px 10px 30px 0px #0000000f;
   }
   .bottomHomeTextArea,
@@ -67,5 +74,26 @@
     font-family: $font-family-base;
     font-weight: $font-weight-regular;
     margin-top: 30px;
+  }
+}
+.aboutRightContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 696px;
+  max-height: 547px;
+  gap: 10px;
+
+  .rightBottomImg {
+    max-width: 333px;
+    max-height: 500px;
+    border-radius: 30px;
+  }
+  .bottomFirstImg {
+    margin-bottom: -50px;
+  }
+
+  .topSecondImg {
+    margin-top: -60px;
   }
 }
