@@ -46,6 +46,26 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+        <div className={styles.aboutRightContainer}>
+          <div className={styles.rightBottomImg}>
+            <img
+              className={styles.bottomFirstImg}
+              src="./images/aboutSection-right-img1.svg"
+              alt="aboutSection-right1"
+            />
+          </div>
+          <div className={styles.rightTopImg}>
+            <img
+              className={styles.topSecondImg}
+              src="./images/aboutSection-right-img2.svg"
+              alt="aboutSection-right3"
+            />
+            <img
+              src="./images/aboutSection-right-img3.svg"
+              alt="aboutSection-right3"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
