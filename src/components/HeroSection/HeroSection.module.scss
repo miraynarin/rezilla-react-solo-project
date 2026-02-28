@@ -304,3 +304,12 @@
     padding: 116px 72px;
   }
 }
+@media (max-width: $r-1050) {
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 60px;
+  }
+}
