@@ -22,6 +22,13 @@ const HeroSection = () => {
     "/images/herosection-left-image3.jpg",
     "/images/herosection-left-image2.jpg",
   ];
+  const customers = [
+    "/images/hero-stats-user1.png",
+    "/images/hero-stats-user2.png",
+    "/images/hero-stats-user3.png",
+    "/images/hero-stats-user4.png",
+    "/images/hero-stats-user5.png",
+  ];
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Dışarı tıklayınca dropdown kapatma
@@ -191,6 +198,28 @@ const HeroSection = () => {
               <button className={styles.bottomHeroButton}>Search</button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={styles.heroStatsElements}>
+        <div className={styles.heroLeftStats}>
+          <div className={styles.avatarGroup}>
+            {customers.map((img, index) => (
+              <div key={index} className={styles.avatar}>
+                <img src={img} alt={`customer-${index}`} />
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.customerText}>
+            <p>72k+ Happy</p>
+            <p>Customers</p>
+          </div>
+        </div>
+        <div className={styles.heroRightStats}>
+          <img src="./images/hero-stats-right.png" alt="hero-stats-right" />
+          <p>
+            200+ New <br /> Listings Everyday!
+          </p>
         </div>
       </div>
     </div>
