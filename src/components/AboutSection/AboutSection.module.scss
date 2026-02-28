@@ -1,0 +1,71 @@
+@use "/src/styles/variables" as *;
+.aboutSection {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+  margin: 72px auto 0;
+}
+.aboutLeftContainer {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.aboutLeftTextArea {
+  max-width: 500px;
+
+  .leftTextAreaTitle {
+    font-size: 19.4;
+    color: $color-accent;
+    font-family: $font-family-base;
+    font-weight: $font-weight-medium;
+  }
+  .leftTextAreaContent {
+    font-size: 39.8px;
+    color: $color-dark;
+    font-family: $font-family-base;
+    font-weight: $font-weight-semibold;
+  }
+  .leftTextAreaExplain {
+    font-size: 16px;
+    color: $color-gray;
+    font-family: $font-family-base;
+    font-weight: $font-weight-regular;
+    margin-bottom: 30px;
+  }
+}
+.leftBottomArea {
+  max-width: 400px;
+  .leftBottomHome,
+  .leftBottomUser {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    border-radius: 30px;
+    padding: 35px;
+    box-shadow: 4px 10px 30px 0px #0000000f;
+  }
+  .bottomHomeTextArea,
+  .bottomHomeUserArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bottomHomeText,
+  .leftBottomUser {
+    font-size: 19.4px;
+    color: $color-accent;
+    font-family: $font-family-base;
+    font-weight: $font-weight-medium;
+  }
+  .bottomHomeExplain,
+  .leftBottomUser {
+    font-size: 16px;
+    color: $color-gray;
+    font-family: $font-family-base;
+    font-weight: $font-weight-regular;
+    margin-top: 30px;
+  }
+}
