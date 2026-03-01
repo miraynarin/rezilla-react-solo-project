@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   // Slider resimleri ve aktif index
   const slides = [
-    "/images/herosection-left-image.png",
+    "/images/herosection-ımg1.jpg",
     "/images/herosection-left-image2.jpg",
     "/images/herosection-left-image3.jpg",
     "/images/herosection-left-image2.jpg",
