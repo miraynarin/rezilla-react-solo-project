@@ -28,6 +28,7 @@ const HeroSection = () => {
     "/images/hero-stats-user3.png",
     "/images/hero-stats-user4.png",
     "/images/hero-stats-user5.png",
+    "/images/hero-stats-plus.png",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -204,7 +205,12 @@ const HeroSection = () => {
         <div className={styles.heroLeftStats}>
           <div className={styles.avatarGroup}>
             {customers.map((img, index) => (
-              <div key={index} className={styles.avatar}>
+              <div
+                key={index}
+                className={`${styles.avatar} ${
+                  img.includes("plus") ? styles.plusAvatar : ""
+                }`}
+              >
                 <img src={img} alt={`customer-${index}`} />
               </div>
             ))}
