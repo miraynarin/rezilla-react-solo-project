@@ -50,18 +50,19 @@ const AboutSection = () => {
           <div className={styles.rightBottomImg}>
             <img
               className={styles.bottomFirstImg}
-              src="./images/aboutSection-right-img1.svg"
+              src="./images/aboutSection-right-img1.jpg"
               alt="aboutSection-right1"
             />
           </div>
           <div className={styles.rightTopImg}>
             <img
-              className={styles.topSecondImg}
-              src="./images/aboutSection-right-img2.svg"
+              className={styles.topFirstImg}
+              src="./images/aboutSection-right-img2.jpg"
               alt="aboutSection-right3"
             />
             <img
-              src="./images/aboutSection-right-img3.svg"
+              className={styles.topSecondImg}
+              src="./images/aboutSection-right-img3.jpg"
               alt="aboutSection-right3"
             />
           </div>
