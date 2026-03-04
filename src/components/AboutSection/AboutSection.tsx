@@ -65,6 +65,11 @@ const AboutSection = () => {
               src="./images/aboutSection-right-img3.jpg"
               alt="aboutSection-right3"
             />
+            <img
+              src="./images/aboutSection-text-icon.svg"
+              alt="circular text"
+              className={styles.circleBadge}
+            />
           </div>
         </div>
       </div>
