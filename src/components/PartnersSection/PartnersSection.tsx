@@ -2,12 +2,12 @@ import styles from "./PartnersSection.module.scss";
 
 const PartnersSection = () => {
   const partnersImg = [
-    "/images/partners-img1.svg",
-    "/images/partners-img2.svg",
-    "/images/partners-img3.svg",
-    "/images/partners-img4.svg",
-    "/images/partners-img5.svg",
-    "/images/partners-img6.svg",
+    "/images/PartnersSection/partners-img1.svg",
+    "/images/PartnersSection/partners-img2.svg",
+    "/images/PartnersSection/partners-img3.svg",
+    "/images/PartnersSection/partners-img4.svg",
+    "/images/PartnersSection/partners-img5.svg",
+    "/images/PartnersSection/partners-img6.svg",
   ];
   return (
     <div className={styles.partnersContainer}>

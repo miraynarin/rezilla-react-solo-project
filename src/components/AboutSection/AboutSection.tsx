@@ -22,7 +22,7 @@ const AboutSection = () => {
           <div className={styles.leftBottomArea}>
             <div className={styles.leftBottomHome}>
               <img
-                src="./images/aboutSection-home.svg"
+                src="./images/AboutSection/aboutSection-home.svg"
                 alt="aboutSection-home"
               />
               <div className={styles.bottomHomeTextArea}>
@@ -34,7 +34,7 @@ const AboutSection = () => {
             </div>
             <div className={styles.leftBottomUser}>
               <img
-                src="./images/aboutSection-user.svg"
+                src="./images/AboutSection/aboutSection-user.svg"
                 alt="aboutSection-user"
               />
               <div className={styles.bottomHomeUserArea}>
@@ -50,23 +50,23 @@ const AboutSection = () => {
           <div className={styles.rightBottomImg}>
             <img
               className={styles.bottomFirstImg}
-              src="./images/aboutSection-right-img1.jpg"
+              src="./images/AboutSection/aboutSection-right-img1.jpg"
               alt="aboutSection-right1"
             />
           </div>
           <div className={styles.rightTopImg}>
             <img
               className={styles.topFirstImg}
-              src="./images/aboutSection-right-img2.jpg"
+              src="./images/AboutSection/aboutSection-right-img2.jpg"
               alt="aboutSection-right3"
             />
             <img
               className={styles.topSecondImg}
-              src="./images/aboutSection-right-img3.jpg"
+              src="./images/AboutSection/aboutSection-right-img3.jpg"
               alt="aboutSection-right3"
             />
             <img
-              src="./images/aboutSection-text-icon.svg"
+              src="./images/AboutSection/aboutSection-text-icon.svg"
               alt="circular text"
               className={styles.circleBadge}
             />

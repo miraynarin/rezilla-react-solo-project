@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./ListingSection.module.scss";
+import ListingCard from "./ListingCard";
 
 const ListingSection = () => {
   const [filter, setFilter] = useState("all");
