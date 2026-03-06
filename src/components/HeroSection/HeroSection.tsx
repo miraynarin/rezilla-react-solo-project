@@ -17,18 +17,18 @@ const HeroSection = () => {
 
   // Slider resimleri ve aktif index
   const slides = [
-    "/images/herosection-ımg1.jpg",
-    "/images/herosection-left-image2.jpg",
-    "/images/herosection-left-image3.jpg",
-    "/images/herosection-left-image2.jpg",
+    "/images/HeroSection/herosection-ımg1.jpg",
+    "/images/HeroSection/herosection-left-image2.jpg",
+    "/images/HeroSection/herosection-left-image3.jpg",
+    "/images/HeroSection/herosection-left-image2.jpg",
   ];
   const customers = [
-    "/images/hero-stats-user1.png",
-    "/images/hero-stats-user2.png",
-    "/images/hero-stats-user3.png",
-    "/images/hero-stats-user4.png",
-    "/images/hero-stats-user5.png",
-    "/images/hero-stats-plus.png",
+    "/images/HeroSection/hero-stats-user1.png",
+    "/images/HeroSection/hero-stats-user2.png",
+    "/images/HeroSection/hero-stats-user3.png",
+    "/images/HeroSection/hero-stats-user4.png",
+    "/images/HeroSection/hero-stats-user5.png",
+    "/images/HeroSection/hero-stats-plus.png",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -80,10 +80,16 @@ const HeroSection = () => {
 
               {/* OK TUŞLARI */}
               <button className={styles.prevArrow} onClick={prevSlide}>
-                <img src="/images/herosection-left-icon.png" alt="Previous" />
+                <img
+                  src="/images/HeroSection/herosection-left-icon.png"
+                  alt="Previous"
+                />
               </button>
               <button className={styles.nextArrow} onClick={nextSlide}>
-                <img src="/images/herosection-right-icon.png" alt="Next" />
+                <img
+                  src="/images/HeroSection/herosection-right-icon.png"
+                  alt="Next"
+                />
               </button>
             </div>
 
@@ -190,7 +196,10 @@ const HeroSection = () => {
               </div>
 
               <div className={styles.advancedSearchArea}>
-                <img src="/images/advance-search-icon.svg" alt="icon" />
+                <img
+                  src="/images/HeroSection/advance-search-icon.svg"
+                  alt="icon"
+                />
                 <Link to="/advanced-search" className={styles.advanceSearch}>
                   Advanced Search
                 </Link>
@@ -222,7 +231,10 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.heroRightStats}>
-          <img src="./images/hero-stats-right.png" alt="hero-stats-right" />
+          <img
+            src="./images/HeroSection/hero-stats-right.png"
+            alt="hero-stats-right"
+          />
           <p>
             200+ New <br /> Listings Everyday!
           </p>
