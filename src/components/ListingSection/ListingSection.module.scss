@@ -1,0 +1,87 @@
+@use "/src/styles/variables" as *;
+.listingSection {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  margin: 72px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 72px;
+  gap: 30px;
+
+  .listingTopSection {
+    max-width: 1440px;
+    max-height: 139;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    padding-right: 72px;
+    padding-left: 54px;
+
+    .listingTopLeft {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .listingTopLeftTitle {
+      font-size: 19.4px;
+      color: $color-accent;
+      font-family: $font-family-base;
+      font-weight: $font-weight-medium;
+    }
+
+    .listingTopLeftText {
+      font-size: 39.8px;
+      color: $color-dark;
+      font-family: $font-family-base;
+      font-weight: $font-weight-semibold;
+    }
+
+    .listingTopLeftExplain {
+      font-size: 16px;
+      color: $color-gray;
+      font-family: $font-family-base;
+      font-weight: $font-weight-regular;
+    }
+
+    .listingFilterButtons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 285px;
+      gap: 10px;
+
+      .filterBtn {
+        gap: 10px;
+        opacity: 1;
+        max-height: 49px;
+        display: flex;
+        align-items: center;
+        border-radius: 30px;
+        padding: 19px 30px 19px 30px;
+        border-width: 1px;
+        border: 1px solid $color-primary;
+        font-size: 16px;
+        color: $color-primary;
+        font-family: $font-family-base;
+        font-weight: $font-weight-medium;
+        cursor: pointer;
+      }
+
+      .filterBtn:hover {
+        color: $color-white;
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+@media (max-width: $r-1050) {
+  .listingTopSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
