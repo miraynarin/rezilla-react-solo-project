@@ -1,16 +1,25 @@
 @use "/src/styles/variables" as *;
 
 .heroFirstSection {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.heroFirstSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
   background: linear-gradient(
     180deg,
     rgba(76, 201, 240, 0) 0%,
     rgba(67, 97, 238, 0.3) 100%
   );
   border-radius: 0 0 800px 800px;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  max-height: 902px;
+  z-index: -1;
 }
 .heroContainer {
   width: 100%;
@@ -301,6 +310,7 @@
   transform: rotate(180deg);
 }
 .heroStatsElements {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -309,7 +319,9 @@
   font-weight: $font-weight-medium;
   font-size: 19.4px;
   gap: 30px;
-  margin-top: -50px;
+  bottom: -42px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .heroLeftStats {
   display: flex;
@@ -320,6 +332,7 @@
   border-radius: 50px;
   gap: 10px;
   padding: 20px 36px;
+  box-shadow: 10px 30px 50px 0px #0000000d;
 }
 .avatarGroup {
   display: flex;
@@ -366,6 +379,7 @@
   border-radius: 50px;
   max-width: 320px;
   gap: 10px;
+  box-shadow: 10px 30px 50px 0px #0000000d;
 }
 @media (max-width: $r-1440) {
   .heroContainer {
@@ -379,5 +393,16 @@
     align-items: center;
     padding: 20px 20px;
     gap: 60px;
+  }
+  .heroStatsElements {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(0);
+  }
+  .heroFirstSection::before {
+    height: 900px;
+    border-radius: 0 0 400px 400px;
   }
 }
