@@ -4,7 +4,6 @@
   max-width: 1440px;
   height: auto;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
   padding: 0 72px;
   margin: 72px auto 0;
@@ -131,5 +130,34 @@
     height: 205px;
     top: -80px;
     left: 309px;
+  }
+}
+@media (max-width: $r-1050) {
+  /* container column */
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+  }
+
+  /* wrapper'ı layouttan kaldır */
+  .aboutLeftContainer {
+    display: contents;
+  }
+
+  /* sıralama */
+  .aboutLeftTextArea {
+    order: 1;
+  }
+
+  .aboutRightContainer {
+    order: 2;
+    margin: 40px 0;
+    justify-content: center;
+  }
+
+  .leftBottomArea {
+    order: 3;
   }
 }
