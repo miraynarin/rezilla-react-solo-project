@@ -76,6 +76,12 @@
       }
     }
   }
+  .cardGrid {
+    display: flex;
+    flex-direction: row;
+    padding-left: 56px;
+    gap: 30px;
+  }
 }
 @media (max-width: $r-1050) {
   .listingTopSection {

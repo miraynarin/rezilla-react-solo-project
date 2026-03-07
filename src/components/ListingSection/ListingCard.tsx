@@ -11,6 +11,7 @@ type ListingCardProps = {
   baths: number;
   type: "popular" | "new" | "discounted";
 };
+
 const categoryTexts = {
   popular: {
     text: "Popular",
@@ -18,7 +19,7 @@ const categoryTexts = {
     colorClass: styles.popularCategory,
   },
   new: {
-    text: "Popular",
+    text: "New",
     icon: <FaHome />,
     colorClass: styles.newCategory,
   },
@@ -37,35 +38,41 @@ const ListingCard: React.FC<ListingCardProps> = ({
   beds,
   baths,
   type,
-}) => (
-  <div className={styles.cardSection}>
-    <div className={styles.imageWrapper}>
-      <img src={imageUrl} alt={title} className={styles.image} />
-      {type && (
-        <div className={`${styles.category} ${categoryTexts[type].colorClass}`}>
-          <span className={styles.categoryIcon}>
-            {categoryTexts[type].icon}
+}) => {
+  return (
+    <div className={styles.listingCard}>
+      <div className={styles.listingImageWrapper}>
+        <img src={imageUrl} alt={title} className={styles.listingImage} />
+        {type && (
+          <div
+            className={`${styles.listingCategory} ${categoryTexts[type].colorClass}`}
+          >
+            <span className={styles.listingCategoryIcon}>
+              {categoryTexts[type].icon}
+            </span>
+            {categoryTexts[type].text}
+          </div>
+        )}
+      </div>
+
+      <div className={styles.listingContent}>
+        <h3 className={styles.listingPrice}>
+          ${typeof price === "number" ? price.toLocaleString() : price}
+        </h3>
+        <h4 className={styles.listingBottomTitle}>{title}</h4>
+        <p className={styles.listingBottomAddress}>{address}</p>
+
+        <div className={styles.listingBottomFeatures}>
+          <span className={styles.listingBottomFeature}>
+            <FaBed className={styles.listingBottomFeatureIcon} /> {beds} Beds
           </span>
-          {categoryTexts[type].text}
+          <span className={styles.listingBottomFeature}>
+            <FaBath className={styles.listingBottomFeatureIcon} /> {baths} Bath
+          </span>
         </div>
-      )}
-    </div>
-    <div className={styles.content}>
-      <h3 className={styles.price}>
-        ${typeof price === "number" ? price.toLocaleString() : price}
-      </h3>
-      <h4 className={styles.title}>{title}</h4>
-      <p className={styles.address}>{address}</p>
-      <div className={styles.features}>
-        <span className={styles.feature}>
-          <FaBed className={styles.featureIcon} /> {beds} Beds
-        </span>
-        <span className={styles.feature}>
-          <FaBath className={styles.featureIcon} /> {baths} Bath
-        </span>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ListingCard;
