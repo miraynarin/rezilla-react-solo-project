@@ -1,5 +1,21 @@
-@use "/src/styles/variables" as *;
-.cardSection {
-  max-width: 340px;
-  max-height: 498px;
+.listingCard {
+  width: 340px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: white;
+}
+
+.listingImageWrapper {
+  position: relative; // category badge için
+  width: 340px; // sabit genişlik
+  height: 340px; // sabit yükseklik
+  border-radius: 30px;
+  overflow: hidden; // yuvarlatmayı uygula
+}
+
+.listingImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // resim wrapper’ı doldursun
+  display: block;
 }
