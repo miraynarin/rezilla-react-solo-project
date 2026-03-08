@@ -30,7 +30,7 @@ const listings = [
     imageUrl: "/images/ListingSection/listingsection-card3.jpg",
     price: 3450,
     title: "Charming Cottage in the Meadow",
-    address: "1508 Centennial Farm Road",
+    address: "1508 Centennial Farm RoadHarlan, 51537",
     beds: 4,
     baths: 4,
     type: "discounted",
