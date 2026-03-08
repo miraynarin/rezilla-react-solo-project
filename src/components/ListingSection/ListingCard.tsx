@@ -19,7 +19,7 @@ const categoryTexts = {
     colorClass: styles.popularCategory,
   },
   new: {
-    text: "New",
+    text: "New Listing",
     icon: <FaHome />,
     colorClass: styles.newCategory,
   },
