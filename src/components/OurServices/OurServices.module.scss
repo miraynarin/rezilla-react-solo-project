@@ -1,0 +1,73 @@
+@use "/src/styles/variables" as *;
+
+.ourServicesSection {
+  width: 100%;
+  max-width: 1440px;
+  max-height: 615px;
+  gap: 70px;
+  opacity: 1;
+  padding-top: 50px 72px 50px 72px;
+  background: $background-gray;
+  .ourTopArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .ourTopTitle {
+      color: $color-dark;
+      font-size: 19.4px;
+      font-family: $font-family-base;
+      font-weight: $font-weight-medium;
+    }
+    .outTopText {
+      color: $color-black;
+      font-size: 39.8px;
+      font-family: $font-family-base;
+      font-weight: $font-weight-semibold;
+    }
+  }
+  .ourBottomArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1296px;
+    margin: 0 auto;
+    opacity: 1;
+    margin-top: 60px;
+    .ourFirstCard,
+    .ourSecondCard,
+    .ourThirdCard {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 398.6px;
+      max-height: 363px;
+      gap: 10px;
+
+      opacity: 1;
+      border-radius: 30px;
+      padding: 60px;
+      background-color: $color-white;
+      box-shadow: 4px 10px 30px 0px #00000008;
+      .ourIconWrapper {
+        background-color: $color-accent;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+
+        svg {
+          width: 40px;
+          height: 39px;
+          opacity: 1;
+          border-width: 0.6px;
+        }
+      }
+    }
+  }
+}
