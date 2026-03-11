@@ -89,3 +89,24 @@
     }
   }
 }
+@media (max-width: $r-1050) {
+  .ourServicesSection {
+    .ourServicesContainer {
+      .outTopText {
+        text-align: center;
+      }
+      .ourBottomArea {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .ourFirstCard,
+        .ourSecondCard,
+        .ourThirdCard {
+          width: 100%;
+          max-width: 500px;
+        }
+      }
+    }
+  }
+}
