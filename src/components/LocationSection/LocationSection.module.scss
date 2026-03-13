@@ -1,1 +1,52 @@
 @use "/src/styles/variables" as *;
+
+.locationSection {
+  width: 100%;
+  .locationContainer {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 72px;
+    .locationTopArea {
+      gap: 72px;
+      .locationTitle {
+        color: $color-accent;
+        font-size: 19.4px;
+        font-family: $font-family-base;
+        font-weight: $font-weight-medium;
+      }
+      .locationText {
+        color: $color-dark;
+        font-size: 39.8px;
+        font-family: $font-family-base;
+        font-weight: $font-weight-semibold;
+      }
+    }
+    .locationBottomArea {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+
+      .propertiesCard:nth-child(4),
+      .propertiesCard:nth-child(5) {
+        grid-column: span 1;
+      }
+
+      .propertiesCard:nth-child(1),
+      .propertiesCard:nth-child(2),
+      .propertiesCard:nth-child(3) {
+        grid-row: 1;
+        max-width: 418px;
+        min-height: 320px;
+        gap: 10px;
+        opacity: 1;
+        border-radius: 30px;
+        padding-top: 30px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+      }
+    }
+  }
+}
