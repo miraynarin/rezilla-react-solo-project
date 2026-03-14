@@ -24,29 +24,72 @@
     }
     .locationBottomArea {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
+      grid-template-columns: repeat(6, 1fr);
       gap: 16px;
+    }
+    .propertiesCard {
+      position: relative;
+      min-height: 320px;
+      border-radius: 30px;
+      overflow: hidden;
 
-      .propertiesCard:nth-child(4),
-      .propertiesCard:nth-child(5) {
-        grid-column: span 1;
+      .cardImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
       }
 
-      .propertiesCard:nth-child(1),
-      .propertiesCard:nth-child(2),
-      .propertiesCard:nth-child(3) {
-        grid-row: 1;
-        max-width: 418px;
-        min-height: 320px;
-        gap: 10px;
-        opacity: 1;
-        border-radius: 30px;
-        padding-top: 30px;
-        padding-right: 40px;
-        padding-bottom: 30px;
-        padding-left: 40px;
+      .locationLayer {
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .locationCount {
+          font-family: $font-family-base;
+          font-weight: $font-weight-semibold;
+          font-size: 57.3px;
+          color: $color-white;
+          text-shadow: 2px 10px 30px 0px #00000040;
+        }
+        .locationCity {
+          font-size: 24px;
+          font-weight: 700;
+          color: $color-white;
+        }
       }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0)
+        );
+        z-index: 1;
+      }
+    }
+
+    .propertiesCard:nth-child(1),
+    .propertiesCard:nth-child(2),
+    .propertiesCard:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    .propertiesCard:nth-child(4),
+    .propertiesCard:nth-child(5) {
+      grid-column: span 3;
     }
   }
 }
