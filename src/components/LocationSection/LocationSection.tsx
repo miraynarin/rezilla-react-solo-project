@@ -23,7 +23,7 @@ const properties = [
     id: 4,
     count: 183,
     city: "Philadelphia, PA",
-    imageUrl: "/images//LocationSection/locationSection-img5.jpg",
+    imageUrl: "/images/LocationSection/locationSection-img5.jpg",
   },
   {
     id: 5,
@@ -43,11 +43,8 @@ const LocationSection = () => {
         </div>
         <div className={styles.locationBottomArea}>
           {properties.map(({ id, count, city, imageUrl }) => (
-            <div
-              key={id}
-              className={styles.propertiesCard}
-              style={{ backgroundImage: `url(${imageUrl})` }}
-            >
+            <div key={id} className={styles.propertiesCard}>
+              <img src={imageUrl} alt={city} className={styles.cardImage} />
               <div className={styles.locationLayer}>
                 <span className={styles.locationCount}>{count}</span>
                 <span className={styles.locationCity}>{city}</span>
