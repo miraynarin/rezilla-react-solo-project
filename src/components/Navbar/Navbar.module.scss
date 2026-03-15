@@ -1,19 +1,19 @@
 @use "/src/styles/variables" as *;
 
 .navbarSection {
-  background-color: $color-white;
+  width: 100%;
+}
+
+.navbarContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 15px 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: $color-dark;
-  margin: auto;
-  padding: 15px 0;
-  position: relative;
-  z-index: 999;
   font-family: $font-family-base;
-  max-width: 1440px;
+  color: $color-dark;
 }
-
 .linkArea {
   display: flex;
   gap: 15px;
@@ -123,12 +123,15 @@
   }
 }
 @media (max-width: $r-1440) {
-  .navbarSection {
-    padding: 15px 72px;
+  .navbarContainer {
+    padding: 0 50px;
   }
 }
 
 @media (max-width: $r-1050) {
+  .navbarContainer {
+    padding: 0 20px;
+  }
   .linkArea {
     flex-direction: column;
     gap: 20px;
