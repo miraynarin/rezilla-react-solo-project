@@ -91,21 +91,26 @@
 }
 @media (max-width: $r-1050) {
   .ourServicesSection {
-    .ourServicesContainer {
+    .ourTopArea {
       .outTopText {
-        text-align: center;
+        text-align: center; // metni ortalar
+        width: 100%; // genişliği %100 yap
       }
-      .ourBottomArea {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+    }
 
-        .ourFirstCard,
-        .ourSecondCard,
-        .ourThirdCard {
-          width: 100%;
-          max-width: 500px;
-        }
+    .ourBottomArea {
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      gap: 30px !important;
+
+      .ourFirstCard,
+      .ourSecondCard,
+      .ourThirdCard {
+        max-width: 100% !important;
+        padding: 40px 20px !important;
       }
     }
   }

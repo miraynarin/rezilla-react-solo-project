@@ -78,11 +78,24 @@
 }
 @media (max-width: $r-1050) {
   .listingSection {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     .listingTopSection {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 40px;
+    }
+
+    .cardGrid {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+      gap: 20px;
     }
   }
 }

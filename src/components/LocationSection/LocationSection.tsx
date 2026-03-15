@@ -29,7 +29,7 @@ const properties = [
     id: 5,
     count: 112,
     city: "San Francisco, CA",
-    imageUrl: "/images//LocationSection/locationSection-img4.jpg",
+    imageUrl: "/images/LocationSection/locationSection-img4.jpg",
   },
 ];
 

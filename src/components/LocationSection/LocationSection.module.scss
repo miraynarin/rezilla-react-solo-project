@@ -9,6 +9,7 @@
     padding: 50px 72px;
     .locationTopArea {
       gap: 72px;
+      margin-bottom: 30px;
       .locationTitle {
         color: $color-accent;
         font-size: 19.4px;
@@ -26,6 +27,8 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 16px;
+      row-gap: 40px;
+      grid-auto-flow: dense;
     }
     .propertiesCard {
       position: relative;
@@ -38,7 +41,6 @@
         height: 100%;
         object-fit: cover;
         display: block;
-
         position: absolute;
         top: 0;
         left: 0;
@@ -47,24 +49,32 @@
 
       .locationLayer {
         position: absolute;
-        bottom: 30px;
+        bottom: 70px;
         left: 40px;
         z-index: 2;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        width: 169px;
+        height: 74px;
+        opacity: 1;
 
         .locationCount {
           font-family: $font-family-base;
           font-weight: $font-weight-semibold;
           font-size: 57.3px;
-          color: $color-white;
-          text-shadow: 2px 10px 30px 0px #00000040;
+          color: rgba(255, 255, 255, 0.6);
+          text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.5); // sadece sayıya uygulanır
+          position: relative; // overlayden bağımsız
+          z-index: 3; // gradient overlayden üstte
         }
         .locationCity {
-          font-size: 24px;
-          font-weight: 700;
           color: $color-white;
+          font-family: $font-family-base;
+          font-weight: $font-weight-medium;
+          font-size: 19.4px;
+          white-space: nowrap;
+          line-height: 100%;
+          letter-spacing: 0%;
         }
       }
 
@@ -90,6 +100,62 @@
     .propertiesCard:nth-child(4),
     .propertiesCard:nth-child(5) {
       grid-column: span 3;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .locationSection {
+    .locationContainer {
+      .locationBottomArea {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        row-gap: 20px;
+      }
+
+      .propertiesCard {
+        grid-column: auto !important;
+        min-height: 320px;
+        position: relative;
+      }
+
+      /* İlk 4 kart normal boyutta */
+      .propertiesCard:nth-child(1),
+      .propertiesCard:nth-child(2),
+      .propertiesCard:nth-child(3),
+      .propertiesCard:nth-child(4) {
+        min-height: 320px;
+      }
+
+      /* 5. kart kendi satırında, 2 sütunu kapsıyor */
+      .propertiesCard:nth-child(5) {
+        grid-column: 1 / -1; // tüm 2 sütunu kapla
+        justify-self: stretch; // ortala
+        min-height: 320px; // normal kart yüksekliği
+      }
+
+      /* cardImage */
+      .propertiesCard .cardImage {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* gradient overlay */
+      .propertiesCard::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0)
+        );
+        z-index: 1;
+        border-radius: 30px;
+      }
     }
   }
 }
