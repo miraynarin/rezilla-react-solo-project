@@ -1,5 +1,10 @@
 @use "/src/styles/variables" as *;
-.aboutSection {
+
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  position: relative;
   width: 100%;
   max-width: 1440px;
   height: auto;
@@ -8,14 +13,9 @@
   padding: 0 72px;
   margin: 72px auto 0;
 }
-.aboutContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-}
 .aboutLeftContainer {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0;
 }
 .aboutLeftTextArea {
   max-width: 500px;

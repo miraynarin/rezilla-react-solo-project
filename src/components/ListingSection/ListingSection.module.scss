@@ -2,21 +2,13 @@
 .listingSection {
   width: 100%;
   max-width: 1440px;
-  height: auto;
   margin: 72px auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0 72px;
-  gap: 30px;
 
   .listingTopSection {
-    max-width: 1440px;
-    max-height: 139;
     display: flex;
     justify-content: space-between;
     opacity: 1;
-    padding-right: 72px;
-    padding-left: 54px;
+    padding: 0 72px;
 
     .listingTopLeft {
       max-width: 500px;
@@ -78,16 +70,19 @@
   }
   .cardGrid {
     display: flex;
-    flex-direction: row;
-    padding-left: 56px;
+    padding-left: 72px;
     gap: 30px;
+    margin-top: 30px;
+    overflow: hidden;
   }
 }
 @media (max-width: $r-1050) {
-  .listingTopSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+  .listingSection {
+    .listingTopSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
   }
 }
