@@ -6,6 +6,7 @@ import AboutSection from "./components/AboutSection/AboutSection";
 import ListingSection from "./components/ListingSection/ListingSection";
 import OurServices from "./components/OurServices/OurServices";
 import LocationSection from "./components/LocationSection/LocationSection";
+import MembersSection from "./components/MembersSection/MembersSection";
 import Footer from "./components/Footer/Footer";
 import FooterBottom from "./components/FooterBottom/FooterBottom";
 
@@ -20,6 +21,7 @@ function App() {
       <ListingSection />
       <OurServices />
       <LocationSection />
+      <MembersSection />
       <Footer />
       <FooterBottom />
     </>
