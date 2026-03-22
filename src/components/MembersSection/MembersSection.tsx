@@ -1,4 +1,5 @@
 import styles from "./MembersSection.module.scss";
+import PurpleCircle from "../PurpleCircle";
 const members = [
   {
     id: 1,
@@ -33,6 +34,7 @@ const MembersSection = () => {
           <p className={styles.memberTitle}>INTRODUCE YOURSELF TO </p>
           <p className={styles.memberText}>Our Team of Experts</p>
         </div>
+        <PurpleCircle width="100px" height="100px" left="24%" rotation={-30} />
         <div className={styles.membersGrid}>
           {members.map((item) => (
             <div key={item.id} className={styles.membersCard}>

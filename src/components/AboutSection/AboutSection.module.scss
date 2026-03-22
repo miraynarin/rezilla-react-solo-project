@@ -83,7 +83,7 @@
   max-width: 696px;
   max-height: 547px;
   gap: 30px;
-  &::before {
+  /*   &::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -94,7 +94,7 @@
     opacity: 0.5;
     transform: rotate(-30deg);
     background: linear-gradient(180deg, #4361ee 0%, rgba(67, 97, 238, 0) 100%);
-  }
+  } */
   .rightBottomImg {
     width: 333px;
     height: 500px;

@@ -1,3 +1,4 @@
+import PurpleCircle from "../PurpleCircle";
 import styles from "./AboutSection.module.scss";
 
 const AboutSection = () => {
@@ -47,6 +48,13 @@ const AboutSection = () => {
           </div>
         </div>
         <div className={styles.aboutRightContainer}>
+          <PurpleCircle
+            width="60px"
+            height="60px"
+            bottom="25px"
+            right="205px"
+            rotation={30}
+          />
           <div className={styles.rightBottomImg}>
             <img
               className={styles.bottomFirstImg}
