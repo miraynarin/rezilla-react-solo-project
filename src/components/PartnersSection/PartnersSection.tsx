@@ -1,4 +1,5 @@
 import styles from "./PartnersSection.module.scss";
+import PurpleCircle from "../PurpleCircle";
 
 const PartnersSection = () => {
   const partnersImg = [
@@ -11,6 +12,14 @@ const PartnersSection = () => {
   ];
   return (
     <div className={styles.partnersContainer}>
+      <PurpleCircle
+        width="100px"
+        height="100px"
+        top="10px"
+        left="13%"
+        right="205px"
+        rotation={-30}
+      />
       <p className={styles.partnersText}>
         Trusted by 100+ Companies across the globe!{" "}
       </p>
