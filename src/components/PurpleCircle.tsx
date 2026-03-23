@@ -1,4 +1,4 @@
-export interface BlueCircleProps {
+export interface PurpleCircleProps {
   width: string;
   height: string;
   bottom?: string;
@@ -6,6 +6,7 @@ export interface BlueCircleProps {
   rotation: number;
   top?: string;
   left?: string;
+  className?: string;
 }
 const PurpleCircle = ({
   width,
@@ -15,9 +16,11 @@ const PurpleCircle = ({
   rotation,
   top,
   left,
-}: BlueCircleProps) => {
+  className,
+}: PurpleCircleProps) => {
   return (
     <div
+      className={className}
       style={{
         width: width,
         height: height,
