@@ -34,7 +34,14 @@ const MembersSection = () => {
           <p className={styles.memberTitle}>INTRODUCE YOURSELF TO </p>
           <p className={styles.memberText}>Our Team of Experts</p>
         </div>
-        <PurpleCircle width="100px" height="100px" left="24%" rotation={-30} />
+        <PurpleCircle
+          className={styles.purpleCircle}
+          width="100px"
+          height="100px"
+          left="18%"
+          top="60px"
+          rotation={-30}
+        />
         <div className={styles.membersGrid}>
           {members.map((item) => (
             <div key={item.id} className={styles.membersCard}>
