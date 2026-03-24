@@ -1,1 +1,17 @@
 @use "/src/styles/variables" as *;
+.section {
+  background: linear-gradient(180deg, #5f2eea, #3a0ca3);
+  padding: 60px;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
