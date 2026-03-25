@@ -1,4 +1,4 @@
-import styles from "./TrendinSection.module.scss";
+import styles from "./TrendingSection.module.scss";
 
 type Props = {
   blog: {
@@ -16,15 +16,15 @@ export default function TrendingCard({ blog }: Props) {
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
         <img src={blog.image} alt={blog.title} />
-        <div className={styles.date}>
+        <div className={styles.dateOverlay}>
           <span>{blog.date}</span>
           <small>{blog.day}</small>
         </div>
       </div>
-
-      <h3>{blog.title}</h3>
-      <p>{blog.desc}</p>
-
+      <div className={styles.TrendingText}>
+        <h3>{blog.title}</h3>
+        <p>{blog.desc}</p>
+      </div>
       <button className={styles.arrow}>→</button>
     </div>
   );
