@@ -1,7 +1,7 @@
 const blogs = [
   {
     id: 1,
-    title: "Top 10 Home Buying Mistakes to Avoid",
+    title: "Top 10 Home Buying  Mistakes to Avoid",
     desc: "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum.",
     image: "/images/TrendingSection/trendingSection-img1.jpg",
     date: "28",
