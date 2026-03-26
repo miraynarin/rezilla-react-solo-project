@@ -72,7 +72,32 @@
         .TrendingText {
           color: $color-white;
           font-family: $font-family-base;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h3 {
+            font-size: 27.6px;
+            font-weight: $font-weight-medium;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin-top: 15px;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: $font-weight-regular;
+            color: $color-gray;
+            line-height: 1.5;
+          }
         }
+      }
+      .TrendingArrow {
+        background-color: $color-white;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        position: absolute;
+        right: 0px;
       }
     }
   }
