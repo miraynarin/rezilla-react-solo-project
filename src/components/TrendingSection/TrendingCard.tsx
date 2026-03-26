@@ -25,7 +25,7 @@ export default function TrendingCard({ blog }: Props) {
         <h3>{blog.title}</h3>
         <p>{blog.desc}</p>
       </div>
-      <button className={styles.arrow}>→</button>
+      <button className={styles.TrendingArrow}>→</button>
     </div>
   );
 }
