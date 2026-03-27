@@ -6,19 +6,19 @@
   .TrendingContainer {
     width: 100%;
     max-width: 1440px;
+    min-height: 900px;
     margin: 0 auto;
-    padding-top: 100px;
-    padding-right: 160px;
-    padding-bottom: 100px;
-    padding-left: 160px;
+    padding: 100px 160px;
     position: relative;
+    display: flex;
+    flex-direction: column;
     .TrendingTop {
       color: $color-white;
       font-family: $font-family-base;
       display: flex;
       align-items: center;
       flex-direction: column;
-      gap: 10px;
+
       .TrendingSubtitle {
         font-size: 19.4px;
         font-weight: $font-weight-medium;
@@ -32,9 +32,11 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      max-width: 1120;
+      max-width: 1120px;
+      min-height: 467px;
       gap: 50px;
       opacity: 1;
+      margin-top: 40px;
       .card {
         position: relative; // overlay için
         img {
@@ -98,6 +100,29 @@
         border-radius: 30px;
         position: absolute;
         right: 0px;
+        margin-top: 20px;
+      }
+    }
+    .TrendinglineIndicatorWrapper {
+      color: white;
+      display: flex;
+      gap: 10px; // çizgiler arası boşluk
+      margin-top: 10px; // ana slider altına mesafe
+      justify-content: center; // ortaya hizala
+
+      .TrendinglineIndicator {
+        width: 100px; // eşit genişlik
+        height: 0;
+        border-top: 4px solid $color-gray; // varsayılan gri
+        border-radius: 2px;
+        opacity: 0.5;
+        transition:
+          border-color 0.3s ease,
+          opacity 0.3s ease;
+      }
+      .TrendinglineIndicator.active {
+        border-color: $color-white;
+        opacity: 1;
       }
     }
   }
