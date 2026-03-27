@@ -10,19 +10,6 @@ export default function TrendingSection() {
   // Gösterilecek 3 kart
   const visibleBlogs = blogs.slice(startIndex, startIndex + 3);
 
-  // Slider arrow fonksiyonları
-  const nextSlide = () => {
-    if (startIndex + 3 < blogs.length) {
-      setStartIndex(startIndex + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
-    }
-  };
-
   return (
     <section className={styles.TrendingSection}>
       <div className={styles.TrendingContainer}>
@@ -37,16 +24,6 @@ export default function TrendingSection() {
           ))}
         </div>
 
-        {/* Ok Tuşları */}
-        <div className={styles.TrendingArrows}>
-          <button className={styles.TrendingPrevArrow} onClick={prevSlide}>
-            ←
-          </button>
-          <button className={styles.TrendingNextArrow} onClick={nextSlide}>
-            →
-          </button>
-        </div>
-
         {/* Alt Çizgiler (3 çizgi sabit) */}
         <div className={styles.TrendinglineIndicatorWrapper}>
           {Array.from({ length: 3 }).map((_, index) => (
@@ -55,7 +32,11 @@ export default function TrendingSection() {
               className={`${styles.TrendinglineIndicator} ${
                 startIndex === index ? styles.active : ""
               }`}
-              onClick={() => setStartIndex(index)}
+              onClick={() => {
+                // startIndex’in slice sınırları içinde kalmasını sağla
+                const maxIndex = blogs.length - 3; // 3 kart gösteriliyor
+                setStartIndex(index <= maxIndex ? index : maxIndex);
+              }}
             />
           ))}
         </div>
