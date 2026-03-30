@@ -8,6 +8,7 @@ import OurServices from "./components/OurServices/OurServices";
 import LocationSection from "./components/LocationSection/LocationSection";
 import MembersSection from "./components/MembersSection/MembersSection";
 import TrendingSection from "./components/TrendingSection/TrendingSection";
+import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import FooterBottom from "./components/FooterBottom/FooterBottom";
 
@@ -24,6 +25,7 @@ function App() {
       <LocationSection />
       <MembersSection />
       <TrendingSection />
+      <Testimonials />
       <Footer />
       <FooterBottom />
     </>
