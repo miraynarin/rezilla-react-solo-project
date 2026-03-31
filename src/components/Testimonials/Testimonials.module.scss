@@ -1,1 +1,86 @@
 @use "/src/styles/variables" as *;
+.testimonialsSection {
+  width: 100%;
+  .testimonialsContainer {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 72px 72px;
+    position: relative;
+    .testimonialLeftArea {
+      max-width: 415px;
+      gap: 30px;
+      opacity: 1;
+      font-family: $font-family-base;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .testimonialLeftTitle {
+        font-size: 19.4px;
+        color: $color-accent;
+        font-weight: $font-weight-medium;
+        line-height: 100%;
+        letter-spacing: 15%;
+      }
+      .testimonialLeftSubtitle {
+        font-size: 39.8px;
+        font-weight: $font-weight-semibold;
+        line-height: 47px;
+        letter-spacing: 0%;
+      }
+      .testimonialLeftText {
+        font-size: 16px;
+        font-weight: $font-weight-regular;
+        line-height: 26px;
+        letter-spacing: 0%;
+      }
+    }
+    .testimonialRightArea {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      flex: 1;
+      .testimonialCard {
+        background-color: $color-white;
+        border-radius: 20px;
+        padding: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        .quotelcon {
+          background-color: $color-yellow;
+          border-radius: 50%;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .TestimonialAvatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .Testimonialstext {
+          font-size: 16px;
+          color: $color-dark;
+          line-height: 24px;
+        }
+
+        .Testimonialsname {
+          font-weight: $font-weight-semibold;
+          font-size: 18px;
+        }
+
+        .Testimonialsrole {
+          font-size: 14px;
+          color: $color-gray;
+        }
+      }
+    }
+  }
+}
