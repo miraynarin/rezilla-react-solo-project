@@ -2,23 +2,23 @@
 export const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    text: "Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.",
-    role: "Customer",
+    name: "Barbara D. Smith",
+    text: "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
     image: "/images/MembersSection/membersSection-img1.jpg", 
+    rating: 5,
   },
   {
     id: 2,
     name: "Jane Smith",
-    text: "Aliquam erat volutpat. Curabitur at lacus ac velit ornare lobortis.",
-    role: "Customer",
+    text: "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
     image: "/images/MembersSection/membersSection-img2.jpg",
+    rating: 4,
   },
   {
     id: 3,
     name: "Alice Johnson",
-    text: "Sed cursus turpis vitae tortor. Pellentesque habitant morbi tristique.",
-    role: "Customer",
+    text: "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
     image: "/images/MembersSection/membersSection-img3.jpg",
+    rating: 3,
   },
 ];

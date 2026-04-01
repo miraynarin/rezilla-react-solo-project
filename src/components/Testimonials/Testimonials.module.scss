@@ -7,6 +7,9 @@
     margin: 0 auto;
     padding: 72px 72px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
     .testimonialLeftArea {
       max-width: 415px;
       gap: 30px;
@@ -40,6 +43,16 @@
       flex-direction: column;
       gap: 30px;
       flex: 1;
+      max-width: 722px;
+      box-shadow: 10px 10px 30px 0px #0000001a;
+      padding-top: 28px;
+      padding-right: 50px;
+      padding-bottom: 28px;
+      padding-left: 50px;
+      gap: 30px;
+      opacity: 1;
+      border-radius: 30px;
+
       .testimonialCard {
         background-color: $color-white;
         border-radius: 20px;
@@ -49,8 +62,9 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
-        .quotelcon {
+        .quoteIcon {
           background-color: $color-yellow;
+          color: $color-yellow;
           border-radius: 50%;
           padding: 10px;
           display: flex;
@@ -58,27 +72,36 @@
           justify-content: center;
         }
 
-        .TestimonialAvatar {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
-
-        .Testimonialstext {
+        .testimonialsText {
           font-size: 16px;
           color: $color-dark;
           line-height: 24px;
         }
+        .testimonialsUsers {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
 
-        .Testimonialsname {
-          font-weight: $font-weight-semibold;
-          font-size: 18px;
-        }
-
-        .Testimonialsrole {
-          font-size: 14px;
-          color: $color-gray;
+          .testimonialStars {
+            display: flex;
+            gap: 4px;
+          }
+          .testimonialsName {
+            font-weight: $font-weight-semibold;
+            font-size: 18px;
+          }
+          .testimonialAvatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
         }
       }
     }
