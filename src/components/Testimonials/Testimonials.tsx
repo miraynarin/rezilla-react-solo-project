@@ -61,7 +61,7 @@ const Testimonials = () => {
 
         {/* Sağ alan - kartlar */}
         <div className={styles.testimonialRightArea}>
-          {testimonials.map((t) => (
+          {testimonials.slice(startIndex, startIndex + 1).map((t) => (
             <TestimonialsCard
               key={t.id}
               text={t.text}
