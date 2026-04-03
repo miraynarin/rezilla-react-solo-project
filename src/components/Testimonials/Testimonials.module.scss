@@ -54,6 +54,7 @@
       opacity: 1;
       border-radius: 30px;
       overflow: hidden;
+      position: relative;
       .testimonialCard {
         background-color: $color-white;
         border-radius: 20px;
@@ -86,19 +87,19 @@
           width: 100%;
           display: flex;
           align-items: center;
+          max-width: 500px;
+          justify-content: space-between;
 
           .testimonialsInfo {
             display: flex;
             align-items: center;
             gap: 10px;
-            flex: 1;
           }
 
           .testimonialStars {
             display: flex;
             gap: 4px;
             color: $color-yellow;
-            margin-left: 12px;
           }
           .testimonialsName {
             font-weight: $font-weight-semibold;
@@ -112,6 +113,34 @@
           }
         }
       }
+    }
+
+    .TrendinglineIndicatorWrapper {
+      color: $color-dark-gray;
+      display: flex;
+      top: 50%;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: center;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+
+    .TrendinglineIndicator {
+      width: 100px;
+      height: 0;
+      border-top: 4px solid $color-gray;
+      border-radius: 2px;
+      opacity: 0.5;
+      transition:
+        border-color 0.3s ease,
+        opacity 0.3s ease;
+    }
+
+    .TrendinglineIndicator.active {
+      border-color: $color-gray;
+      opacity: 1;
     }
   }
 }
