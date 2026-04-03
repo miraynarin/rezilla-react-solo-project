@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Testimonials.module.scss";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { testimonials } from "./testimonialsData";
@@ -41,6 +42,7 @@ const TestimonialsCard = ({
 
 // Ana Testimonials componenti
 const Testimonials = () => {
+  const [startIndex, setStartIndex] = useState(0);
   return (
     <div className={styles.testimonialsSection}>
       <div className={styles.testimonialsContainer}>
@@ -66,6 +68,18 @@ const Testimonials = () => {
               name={t.name}
               image={t.image}
               stars={t.rating}
+            />
+          ))}
+        </div>
+        {/* Vertical Slider Indicator */}
+        <div className={styles.TrendinglineIndicatorWrapper}>
+          {testimonials.map((_, index) => (
+            <div
+              key={index}
+              className={`${styles.TrendinglineIndicator} ${
+                startIndex === index ? styles.active : ""
+              }`}
+              onClick={() => setStartIndex(index)}
             />
           ))}
         </div>

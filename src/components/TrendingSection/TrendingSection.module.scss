@@ -104,7 +104,7 @@
       }
     }
     .TrendinglineIndicatorWrapper {
-      color: white;
+      color: $color-gray;
       display: flex;
       gap: 10px; // çizgiler arası boşluk
       margin-top: 10px; // ana slider altına mesafe
@@ -121,7 +121,7 @@
           opacity 0.3s ease;
       }
       .TrendinglineIndicator.active {
-        border-color: $color-white;
+        border-color: $color-gray;
         opacity: 1;
       }
     }
