@@ -29,6 +29,7 @@
       }
     }
     .TrendingGrid {
+      position: relative;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
@@ -123,6 +124,25 @@
       .TrendinglineIndicator.active {
         border-color: $color-gray;
         opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: $r-1050) {
+  .TrendingSection {
+    .TrendingContainer {
+      padding: 60px 40px;
+
+      .TrendingTop {
+        .TrendingTitle {
+          font-size: 32px;
+        }
+      }
+
+      .TrendingGrid {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
     }
   }
