@@ -149,7 +149,7 @@
 @media (max-width: 1050px) {
   .testimonialsSection {
     .testimonialsContainer {
-      flex-direction: column; // üst üste dizmek için
+      flex-direction: column;
       gap: 30px;
 
       .testimonialLeftArea {
@@ -158,9 +158,9 @@
 
       .testimonialRightArea {
         max-width: 100%;
-        order: 2; // sağ alan alttan gelsin
+        order: 2;
         width: 100%;
-        padding: 20px; // gerekirse paddingi daralt
+        padding: 20px;
       }
     }
   }
