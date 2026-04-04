@@ -146,3 +146,22 @@
     }
   }
 }
+@media (max-width: 1050px) {
+  .testimonialsSection {
+    .testimonialsContainer {
+      flex-direction: column; // üst üste dizmek için
+      gap: 30px;
+
+      .testimonialLeftArea {
+        max-width: 100%;
+      }
+
+      .testimonialRightArea {
+        max-width: 100%;
+        order: 2; // sağ alan alttan gelsin
+        width: 100%;
+        padding: 20px; // gerekirse paddingi daralt
+      }
+    }
+  }
+}
