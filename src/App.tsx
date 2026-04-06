@@ -9,6 +9,7 @@ import LocationSection from "./components/LocationSection/LocationSection";
 import MembersSection from "./components/MembersSection/MembersSection";
 import TrendingSection from "./components/TrendingSection/TrendingSection";
 import Testimonials from "./components/Testimonials/Testimonials";
+import BecomeSection from "./components/BecomeAgentSection/BecomeSection";
 import Footer from "./components/Footer/Footer";
 import FooterBottom from "./components/FooterBottom/FooterBottom";
 
@@ -26,6 +27,7 @@ function App() {
       <MembersSection />
       <TrendingSection />
       <Testimonials />
+      <BecomeSection />
       <Footer />
       <FooterBottom />
     </>
