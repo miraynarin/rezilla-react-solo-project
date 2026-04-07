@@ -9,20 +9,61 @@
   justify-content: space-between;
   gap: 30px;
   .becomeContainer {
-    width: 1296px;
+    max-width: 1296px;
     background-color: $color-primary;
-    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
     opacity: 1;
-    padding-right: 100px;
-    padding-left: 100px;
     border-radius: 40px;
+    padding-right: 120px;
   }
   .becomeImage {
     width: 100%;
     max-width: 358px;
-    height: auto;
     opacity: 1;
     display: block;
-    margin: 0 20px;
+  }
+  .becomeRightArea {
+    display: flex;
+    margin-left: auto;
+    gap: 80px;
+    .becomeTextArea {
+      gap: 30px;
+    }
+    .becomeTitle {
+      color: $color-white;
+      font-family: $font-family-base;
+      font-weight: $font-weight-semibold;
+      font-size: 39.8px;
+      line-height: 47px;
+      letter-spacing: 0%;
+    }
+    .becomeText {
+      color: $color-white;
+      font-family: $font-family-base;
+      font-weight: $font-weight-regular;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0%;
+    }
+    .becomeButton {
+      color: $color-primary;
+      background-color: $color-white;
+      width: 165px;
+      height: 49px;
+      gap: 10px;
+      opacity: 1;
+      padding: 19px 30px 19px 30px;
+      border-radius: 30px;
+      font-family: $font-family-base;
+      font-weight: $font-weight-medium;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      margin-top: 49px;
+    }
   }
 }
