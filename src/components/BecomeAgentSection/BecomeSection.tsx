@@ -6,7 +6,7 @@ const BecomeSection = () => {
     <div className={styles.becomeSection}>
       <div className={styles.becomeContainer}>
         <PurpleCircle
-          className={styles.purpleCircle}
+          className={styles.smallCircle}
           width="60px"
           height="60px"
           left="2%"
@@ -19,12 +19,12 @@ const BecomeSection = () => {
           alt="Become Icon"
         />
         <PurpleCircle
-          className={styles.purpleCircle}
+          className={styles.bigCircle}
           width="100px"
           height="100px"
           left="15%"
           top="60px"
-          rotation={-30}
+          rotation={0}
         />
         <div className={styles.becomeRightArea}>
           <div className={styles.becomeTextArea}>
