@@ -18,12 +18,20 @@
     opacity: 1;
     border-radius: 40px;
     padding-right: 120px;
+    z-index: 0;
+    overflow: visible;
+    .bigCircle {
+      position: absolute;
+      z-index: -1;
+    }
   }
   .becomeImage {
     width: 100%;
     max-width: 358px;
     opacity: 1;
     display: block;
+    z-index: 2;
+    position: relative;
   }
   .becomeRightArea {
     display: flex;
