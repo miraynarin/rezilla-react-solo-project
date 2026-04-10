@@ -25,6 +25,7 @@ const BecomeSection = () => {
           left="15%"
           top="60px"
           rotation={0}
+          color="linear-gradient(180deg, #A855F7 0%, rgba(168, 85, 247, 0) 100%)"
         />
         <div className={styles.becomeRightArea}>
           <div className={styles.becomeTextArea}>
@@ -33,6 +34,15 @@ const BecomeSection = () => {
               Fusce venenatis tellus a felis scelerisque.
               <br /> venenatis tellus a felis scelerisque.
             </p>
+            <PurpleCircle
+              className={styles.bigCircle}
+              width="100px"
+              height="100px"
+              left="30%"
+              top="80px"
+              rotation={0}
+              color="linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%)"
+            />
           </div>
           <button className={styles.becomeButton}>Register Now</button>
         </div>
