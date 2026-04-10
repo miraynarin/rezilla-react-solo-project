@@ -7,6 +7,7 @@ export interface PurpleCircleProps {
   top?: string;
   left?: string;
   className?: string;
+  color?: string;
 }
 const PurpleCircle = ({
   width,
@@ -17,6 +18,7 @@ const PurpleCircle = ({
   top,
   left,
   className,
+  color = "linear-gradient(180deg, #A855F7 0%, rgba(168, 85, 247, 0) 100%)",
 }: PurpleCircleProps) => {
   return (
     <div
@@ -33,8 +35,7 @@ const PurpleCircle = ({
         borderRadius: "50%",
         opacity: 0.5,
         zIndex: 5,
-        background:
-          "linear-gradient(180deg, #4361ee 0%, rgba(67, 97, 238, 0) 100%)",
+        background: color,
       }}
     ></div>
   );
