@@ -2,6 +2,9 @@ import styles from "./BecomeSection.module.scss";
 import PurpleCircle from "../PurpleCircle";
 
 const BecomeSection = () => {
+  const secondPurpleCircle =
+    "linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 400, 0) 100%";
+
   return (
     <div className={styles.becomeSection}>
       <div className={styles.becomeContainer}>
@@ -22,10 +25,10 @@ const BecomeSection = () => {
           className={styles.bigCircle}
           width="100px"
           height="100px"
-          left="15%"
-          top="60px"
+          left="15.15%"
+          top="72px"
           rotation={0}
-          color="linear-gradient(180deg, #A855F7 0%, rgba(168, 85, 247, 0) 100%)"
+          color={secondPurpleCircle}
         />
         <div className={styles.becomeRightArea}>
           <div className={styles.becomeTextArea}>
@@ -38,10 +41,10 @@ const BecomeSection = () => {
               className={styles.bigCircle}
               width="100px"
               height="100px"
-              left="30%"
-              top="80px"
-              rotation={0}
-              color="linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%)"
+              left="55%"
+              bottom="-40px"
+              rotation={-30}
+              color={secondPurpleCircle}
             />
           </div>
           <button className={styles.becomeButton}>Register Now</button>

@@ -7,8 +7,9 @@ export interface PurpleCircleProps {
   top?: string;
   left?: string;
   className?: string;
-  color?: string;
+  color?: string; // opsiyonel
 }
+
 const PurpleCircle = ({
   width,
   height,
@@ -18,26 +19,28 @@ const PurpleCircle = ({
   top,
   left,
   className,
-  color = "linear-gradient(180deg, #A855F7 0%, rgba(168, 85, 247, 0) 100%)",
+  color,
 }: PurpleCircleProps) => {
   return (
     <div
       className={className}
       style={{
-        width: width,
-        height: height,
-        bottom: bottom,
-        left: left,
-        top: top,
-        right: right,
+        width,
+        height,
+        bottom,
+        left,
+        top,
+        right,
         position: "absolute",
         transform: `rotate(${rotation}deg)`,
         borderRadius: "50%",
         opacity: 0.5,
         zIndex: 5,
-        background: color,
+        background:
+          color ??
+          "linear-gradient(180deg, #4361ee 0%, rgba(67, 97, 238, 0) 100%)",
       }}
-    ></div>
+    />
   );
 };
 
