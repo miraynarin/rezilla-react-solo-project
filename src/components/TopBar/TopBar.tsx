@@ -10,7 +10,7 @@ const TopBar = () => {
             src="./images/Topbar/topbar-location-icon.svg"
             alt="topbar-location"
           />
-          Rezilla, 18 Grattan St, Brooklyn
+          <span>Rezilla, 18 Grattan St, Brooklyn</span>
         </div>
         <div className={styles.topbarRight}>
           <div className={styles.topbarItem}>
