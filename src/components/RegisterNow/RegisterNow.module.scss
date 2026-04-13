@@ -1,0 +1,16 @@
+@use "/src/styles/variables" as *;
+.registerNowSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: $color-primary;
+  border-radius: 40px;
+  .registerNowText,
+  .registerNowEmail,
+  .registerNowPassword {
+    background-color: $color-light-gray;
+    border-radius: 30px;
+    padding: 20px;
+    max-height: 30px;
+  }
+}
