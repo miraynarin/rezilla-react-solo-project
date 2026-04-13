@@ -1,9 +1,12 @@
 import styles from "./BecomeSection.module.scss";
 import PurpleCircle from "../PurpleCircle";
+import RegisterNow from "../RegisterNow/RegisterNow";
+import { useState } from "react";
 
 const BecomeSection = () => {
   const secondPurpleCircle =
     "linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 400, 0) 100%";
+  const [openRegister, setOpenRegister] = useState(false);
 
   return (
     <div className={styles.becomeSection}>
@@ -47,9 +50,15 @@ const BecomeSection = () => {
               color={secondPurpleCircle}
             />
           </div>
-          <button className={styles.becomeButton}>Register Now</button>
+          <button
+            className={styles.becomeButton}
+            onClick={() => setOpenRegister(true)}
+          >
+            Register Now
+          </button>
         </div>
       </div>
+      {openRegister && <RegisterNow />}
     </div>
   );
 };

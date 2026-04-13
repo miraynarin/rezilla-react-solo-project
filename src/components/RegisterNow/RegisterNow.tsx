@@ -1,7 +1,12 @@
 import styles from "./RegisterNow.module.scss";
 const RegisterNow = () => {
-  return <div> RegisterNow</div>;
-  <input className={styles.registerNowSection} placeholder="Email" />;
+  return (
+    <div className={styles.registerNowSection}>
+      <input className={styles.registerNowText} placeholder="Name :" />
+      <input className={styles.registerNowEmail} placeholder="Email :" />
+      <input className={styles.registerNowPassword} placeholder="Password :" />
+    </div>
+  );
 };
 
 export default RegisterNow;
