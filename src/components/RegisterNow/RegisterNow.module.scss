@@ -8,7 +8,7 @@
   border-radius: 40px;
   font-family: $font-family-base;
   padding: 10px;
-  min-width: 450px;
+  max-width: 450px;
   min-height: 300px;
   .registerNowText,
   .registerNowEmail,
@@ -17,7 +17,8 @@
     border-radius: 30px;
     margin: 5px 5px;
     padding: 5px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
   }
   .registerNowText {
     margin-top: 20px;
@@ -27,7 +28,7 @@
     color: $color-primary;
     border-radius: 40px;
     width: 100px;
-    margin-left: 50px;
+    margin-left: 15px;
   }
   .registerNowButton:hover,
   .registerNowClose:hover {
@@ -39,13 +40,12 @@
     color: $color-primary;
     border-radius: 40px;
     width: 100px;
-    margin-left: 50px;
+    margin-left: 15px;
   }
 
   .passwordWrapper {
     position: relative;
-    width: 350px;
-    left: -5px;
+    width: 100%;
   }
 
   .registerNowPassword {
@@ -69,5 +69,17 @@
   }
   .registerNowClose {
     margin-top: 25px;
+  }
+}
+@media (max-width: 1050px) {
+  .registerNowSection {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .registerNowSection {
+    max-width: 90%;
+    padding: 15px;
   }
 }
