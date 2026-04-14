@@ -5,12 +5,46 @@
   gap: 10px;
   background-color: $color-primary;
   border-radius: 40px;
+  font-family: $font-family-base;
+  padding: 20px;
   .registerNowText,
   .registerNowEmail,
   .registerNowPassword {
     background-color: $color-light-gray;
     border-radius: 30px;
-    padding: 20px;
+    margin: 5px 5px;
+    padding: 10px;
     max-height: 30px;
+  }
+  .registerNowText {
+    margin-top: 20px;
+  }
+  .registerNowButton {
+    background-color: $color-white;
+    color: $color-primary;
+    border-radius: 40px;
+    width: 100px;
+    margin-left: 50px;
+  }
+  .registerNowClose {
+    background-color: $color-white;
+    color: $color-primary;
+    border-radius: 40px;
+    width: 100px;
+    margin-left: 50px;
+  }
+  .registerNowClose:hover {
+    background-color: $color-dark-gray;
+    color: $color-white;
+  }
+  .eyeButton {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-dark-gray;
   }
 }
