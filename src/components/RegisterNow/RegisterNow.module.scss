@@ -2,19 +2,22 @@
 .registerNowSection {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   background-color: $color-primary;
   border-radius: 40px;
   font-family: $font-family-base;
-  padding: 20px;
+  padding: 10px;
+  min-width: 450px;
+  min-height: 300px;
   .registerNowText,
   .registerNowEmail,
   .registerNowPassword {
     background-color: $color-light-gray;
     border-radius: 30px;
     margin: 5px 5px;
-    padding: 10px;
-    max-height: 30px;
+    padding: 5px;
+    width: 350px;
   }
   .registerNowText {
     margin-top: 20px;
@@ -26,6 +29,11 @@
     width: 100px;
     margin-left: 50px;
   }
+  .registerNowButton:hover,
+  .registerNowClose:hover {
+    background-color: $color-dark-gray;
+    color: $color-white;
+  }
   .registerNowClose {
     background-color: $color-white;
     color: $color-primary;
@@ -33,12 +41,24 @@
     width: 100px;
     margin-left: 50px;
   }
-  .registerNowClose:hover {
-    background-color: $color-dark-gray;
-    color: $color-white;
+
+  .passwordWrapper {
+    position: relative;
+    width: 350px;
+    left: -5px;
   }
+
+  .registerNowPassword {
+    width: 100%;
+    padding-right: 40px;
+    margin-bottom: 10px;
+  }
+
   .eyeButton {
     position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     cursor: pointer;
@@ -46,5 +66,8 @@
     align-items: center;
     justify-content: center;
     color: $color-dark-gray;
+  }
+  .registerNowClose {
+    margin-top: 25px;
   }
 }
