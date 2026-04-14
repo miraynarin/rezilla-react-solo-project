@@ -6,6 +6,7 @@ import { useState } from "react";
 const BecomeSection = () => {
   const secondPurpleCircle =
     "linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 400, 0) 100%";
+
   const [openRegister, setOpenRegister] = useState(false);
 
   return (
@@ -19,11 +20,13 @@ const BecomeSection = () => {
           bottom="10px"
           rotation={-30}
         />
+
         <img
           className={styles.becomeImage}
           src="/images/BecomeSection/becomeAgent-img1.png"
           alt="Become Icon"
         />
+
         <PurpleCircle
           className={styles.bigCircle}
           width="100px"
@@ -33,13 +36,16 @@ const BecomeSection = () => {
           rotation={0}
           color={secondPurpleCircle}
         />
+
         <div className={styles.becomeRightArea}>
           <div className={styles.becomeTextArea}>
             <p className={styles.becomeTitle}>Become a Agent.</p>
+
             <p className={styles.becomeText}>
               Fusce venenatis tellus a felis scelerisque.
               <br /> venenatis tellus a felis scelerisque.
             </p>
+
             <PurpleCircle
               className={styles.bigCircle}
               width="100px"
@@ -50,6 +56,7 @@ const BecomeSection = () => {
               color={secondPurpleCircle}
             />
           </div>
+
           <button
             className={styles.becomeButton}
             onClick={() => setOpenRegister(true)}
@@ -58,7 +65,14 @@ const BecomeSection = () => {
           </button>
         </div>
       </div>
-      {openRegister && <RegisterNow />}
+
+      {openRegister && (
+        <div className={styles.overlay} onClick={() => setOpenRegister(false)}>
+          <div onClick={(e) => e.stopPropagation()}>
+            <RegisterNow onClose={() => setOpenRegister(false)} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

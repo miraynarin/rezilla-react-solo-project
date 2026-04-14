@@ -70,7 +70,9 @@
       font-size: 16px;
       line-height: 100%;
       letter-spacing: 0%;
-      text-align: center;
+      display: flex;
+      align-items: center;
+
       margin-top: 49px;
     }
   }
