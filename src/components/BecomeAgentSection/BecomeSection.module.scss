@@ -75,40 +75,59 @@
       margin-top: 49px;
     }
   }
-  .overlay {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }
 @media (max-width: $r-1050) {
   .becomeSection {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
-  .becomeContainer {
-    display: flex;
-    flex-direction: column;
-  }
-  .becomeImage {
-    display: flex;
-    align-items: center;
-  }
-  .becomeRightArea {
-    display: flex;
-    flex-direction: column;
 
+  .becomeSection .becomeContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 40px 20px;
+    max-width: 420px;
+    gap: 20px;
+  }
+
+  .becomeSection .becomeRightArea {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .becomeSection .becomeTextArea {
+    text-align: center;
     align-items: center;
   }
-  .bigCircle {
-    display: none;
+
+  .becomeSection .becomeImage {
+    max-width: 200px;
   }
-  .smallCircle {
+
+  .becomeSection .becomeButton {
+    margin-top: 0;
+  }
+
+  .becomeSection .bigCircle,
+  .becomeSection .smallCircle {
     display: none;
   }
 }
